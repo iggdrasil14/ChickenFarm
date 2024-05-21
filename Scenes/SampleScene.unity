@@ -1717,6 +1717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a432123526dfc514a94396b1a5f7ed73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hungryStatus: {fileID: 1530966044}
+  camera: {fileID: 963194228}
   agent: {fileID: 1390391435}
 --- !u!195 &1390391435
 NavMeshAgent:
