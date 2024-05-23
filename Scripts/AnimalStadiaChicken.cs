@@ -2,12 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Animal : MonoBehaviour
+public class AnimalStadiaChicken : Animal
 {
-    public float time;
-    public Animal nextAnimal;
-    public ParticleSystem FlashExplosionRadial;
-
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -15,10 +11,14 @@ public abstract class Animal : MonoBehaviour
         CreateAnimalForm();
     }
 
-    protected virtual void CreateAnimalForm()
+    // Update is called once per frame
+    void Update()
     {
-        Destroy(gameObject);
-        Instantiate(FlashExplosionRadial, transform.position, Quaternion.identity);
+        
+    }
+
+    protected override void CreateAnimalForm()
+    {
         Instantiate(nextAnimal, transform.position, Quaternion.identity);
     }
 }
