@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
-  nextAnimal: {fileID: -2621422712893537174, guid: c92e08cbe4b0eef4cbf34b6da5bdf07d, type: 3}
+  nextAnimal: {fileID: 319848306784949323, guid: e601a3268e20cfd48bc737033735679b, type: 3}
   FlashExplosionRadial: {fileID: 198319247725527338, guid: f3b5831261d199a46a0bb9ae287aa5a6, type: 3}
