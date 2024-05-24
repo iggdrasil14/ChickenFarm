@@ -9,7 +9,7 @@ public abstract class Animal : MonoBehaviour
     public ParticleSystem FlashExplosionRadial;
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    public virtual IEnumerator Start()
     {
         yield return new WaitForSeconds(time);
         CreateAnimalForm();
