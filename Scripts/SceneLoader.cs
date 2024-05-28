@@ -10,6 +10,12 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void SceneLoadGame()  //Метод загрузки сохраненной игры.
+    {
+        //SceneManager.LoadScene();
+        Debug.Log("Загрузка сохраненной игры");
+    }
+
     public void SceneOptions()  //Метод запуска экрана опции/настройки.
     {
         //SceneManager.LoadScene();
