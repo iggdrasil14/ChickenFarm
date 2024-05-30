@@ -7,6 +7,8 @@ public class FoodManager : MonoBehaviour
 {
     public int food;
     public TextMeshProUGUI foodText;
+    
+
     // Start is called before the first frame update
     void Start()
     {
