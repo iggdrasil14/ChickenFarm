@@ -11,8 +11,9 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetMouseButtonDown(0))
+        // Не учитывает наличие интерфейса на пути луча.
+        // При нажатии кнопки "купить еды" еда появляется на поле за кнопкой.
+        if (Input.GetMouseButtonDown(0))        
         {
             //Луч
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -20,8 +21,8 @@ public class PlayerInput : MonoBehaviour
             {
                 Vector3 foodCoordinates = hit.point;
                 GameObject food = Instantiate(chikenFood, foodCoordinates, Quaternion.identity);
-                Debug.Log("Hit " + hit.transform.name);
-                Debug.Log(hit.point);
+                //Debug.Log("Hit " + hit.transform.name);
+                //Debug.Log(hit.point);
                 foodManager.SpendFood();
             }
         }    
