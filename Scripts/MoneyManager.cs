@@ -43,4 +43,13 @@ public class MoneyManager : MonoBehaviour
             textMoney.text = money.ToString();
         }
     }
+
+    public void SellChicken()
+    {
+        AnimalStadiaChicken[] chickenToSell = FindObjectsOfType<AnimalStadiaChicken>();
+        AnimalStadiaChicken randomChicken = chickenToSell[Random.Range(0, chickenToSell.Length)];
+        Destroy(randomChicken.gameObject);
+        SetMoney(250);
+    }
+
 }

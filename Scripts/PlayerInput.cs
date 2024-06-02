@@ -7,7 +7,7 @@ public class PlayerInput : MonoBehaviour
     public FoodManager foodManager;
     public GameObject chikenFood;       //Префаб еды.
     public Transform foodCoordinates;   //Точка появления префаба "еда".
-
+    public LayerMask mask;
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class PlayerInput : MonoBehaviour
         {
             //Луч
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit, 200) && foodManager.food > 0)
+            if (Physics.Raycast(ray, out RaycastHit hit, 200, mask) && foodManager.food > 0)
             {
                 Vector3 foodCoordinates = hit.point;
                 GameObject food = Instantiate(chikenFood, foodCoordinates, Quaternion.identity);
